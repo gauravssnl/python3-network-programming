@@ -4,9 +4,11 @@ import argparse
 
 
 # we need to define encode function for converting string to bytes string
+# this will be use for sending/receiving data via socket
 encode = lambda text: text.encode()
 
 # we need to define deocde function for converting bytes string to string
+# this will convert bytes string sent/recieved via socket to string
 decode = lambda byte_text: byte_text.decode()
 
 
