@@ -1,3 +1,5 @@
+# NTP : Network Time Protocol
+
 import ntplib
 from time import ctime
 
