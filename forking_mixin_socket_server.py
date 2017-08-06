@@ -31,13 +31,13 @@ class ForkedClient():
         """Client plays with the server"""
         # send data to server
         current_process_pid = os.getpid()
-        print('PID {} Sending echo message to server :{}'.format(
+        print('PID {} Sending echo message to server : "{}"'.format(
             current_process_pid, ECHO_MSG))
         sent_data_length = self.sock.send(encode(ECHO_MSG))
         print('Sent {} characters so far...'.format(sent_data_length))
 
         # Display server response
-        response = (self.sock.recv(BUFF_SIZE))
+        response = self.sock.recv(BUFF_SIZE)
         print('PID {} received: {}'.format(current_process_pid, decode(response[5:])))
 
     def shutdown(self):
