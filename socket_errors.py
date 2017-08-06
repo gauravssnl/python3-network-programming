@@ -4,7 +4,7 @@ import argparse
 
 
 # we need to define encode function for converting string to bytes string
-# this will be use for sending/receiving data via socket
+# this will be used for sending/receiving data via socket
 encode = lambda text: text.encode()
 
 # we need to define deocde function for converting bytes string to string
