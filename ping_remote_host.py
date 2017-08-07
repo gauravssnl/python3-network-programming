@@ -23,7 +23,6 @@ class Pinger(object):
     def do_checksum(self, source_string):
         """  Verify the packet integritity """
         # print(source_string)
-        source_string = source_string
         sum = 0
         max_count = (len(source_string)//2)*2
         count = 0
