@@ -77,6 +77,7 @@ class Pinger(object):
         Send ping to the target host
         """
         target_addr  =  socket.gethostbyname(self.target_host)
+        print('Target address: {}'.format(target_addr))
      
         my_checksum = 0
      
@@ -102,7 +103,7 @@ class Pinger(object):
         icmp = socket.getprotobyname("icmp")
         try:
             sock = socket.socket(socket.AF_INET, socket.SOCK_RAW, icmp)
-        except socket.errno as errno:
+        except (socket.error, socket.errno) as errno:
             msg = errno
             if errno == 1:
                 # Not superuser, so operation not permitted
