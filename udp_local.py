@@ -29,7 +29,7 @@ def client(port):
     print('The OS assigned me the address {}'.format(sock.getsockname()))
     data, address = sock.recvfrom(MAX_BYTES)  # Danger
     text = data.decode()
-    print('The server {} replied {!r}'.format(address, data))
+    print('The server {} replied {!r}'.format(address, text))
 
 
 if __name__ == '__main__':
